@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import logo from "@/assets/logo.png";
+import fachada from "@/assets/fachada-flor-de-lis.png";
 import lirios from "@/assets/lirios-rosa.png";
 import delicados from "@/assets/lirios-delicados.png";
 import vermelhas from "@/assets/rosas-vermelhas.png";
@@ -301,7 +302,7 @@ function Index() {
       {/* store */}
       <section id="loja" className="py-20">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
-          <img src={presente} alt="Orquídea, pelúcia e laço dourado da Flor de Lis" loading="lazy" className="aspect-square w-full rounded-sm object-cover" />
+          <img src={fachada} alt="Fachada da Floricultura Flor de Lis, com letreiro roxo e entrada na Rua Franz Volles, 1190, em Blumenau" loading="lazy" width="960" height="806" className="h-auto w-full rounded-sm" />
           <div>
             <h2 className="text-4xl leading-tight font-light md:text-5xl">O seu próximo gesto de carinho começa aqui.</h2>
             <p className="mt-5 text-lg text-muted-foreground">Venha conhecer a Flor de Lis na Itoupava Central. Um espaço de flores, presentes e acolhimento em Blumenau.</p>
@@ -339,4 +340,3 @@ function Index() {
     </div>
   );
 }
-
