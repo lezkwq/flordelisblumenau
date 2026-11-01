@@ -1,26 +1,34 @@
-# floricultura
+# Flor de Lis · Blumenau
 
-fivecon ta ai anexado
+Site da Floricultura Flor de Lis, adaptado da demo `lezkwq/demofloricultura`.
 
-crie um site editorial para essa floricultura, usando as imagens reais, pode cumprimir e melhorar a qualidade, use o front end design para tirar o aspecto de IA. site pensado em alta conversao pelo whatsapp. pesquise bem antes sobre conversao para gerar mais ciente pra foricultura
+## Desenvolvimento
 
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/0d982ef3-3f79-4f5e-9966-3d4d571b8203).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Node.js 22+ e pnpm (lockfile incluído):
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+pnpm install --frozen-lockfile
+pnpm dev
+pnpm build
+pnpm test
 ```
+
+O projeto mantém React, TanStack Start e Tailwind da demo. A configuração existente gera a versão de produção em `.output/` com Nitro para Cloudflare.
+
+## Conteúdo
+
+- Identidade roxa, logotipo original e favicon com o símbolo da marca.
+- Fotos reais fornecidas pelo usuário, recortadas e comprimidas em PNG, importadas de `src/assets/`.
+- Catálogo de rosas interativo: 1 a 6 unidades, de R$ 22,00 a R$ 132,00, conforme a tabela fornecida. Os exemplos foram extraídos das artes enviadas; acessórios e apresentação devem ser confirmados com a loja.
+- Pedidos e consultas pelo WhatsApp: +55 47 99106-5803.
+- Endereço: Rua Franz Volles, 1190, Itoupava Central, Blumenau, SC, CEP 89066-101.
+- Horário regular transcrito do perfil enviado: segunda a sexta, 08h–12h e 13h30–18h30; sábado, 08h–12h. Artes sazonais de feriados não foram tratadas como horário regular.
+- Uma avaliação fornecida: Pedro Machado, “Excelente atendimento!”, nota 5,0 no Google.
+
+Valores, disponibilidade e possibilidade de entrega são confirmados com a loja pelo WhatsApp. Não há checkout ou confirmação automática de pedido.
+
+## Validação
+
+`pnpm build`, `tsc --noEmit` e três testes (rota inicial, seleção de rosas e composição da mensagem do pedido).
+
+O único remoto Git deve apontar para `https://github.com/lezkwq/flordelisblumenau.git`.
