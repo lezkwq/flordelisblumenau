@@ -76,7 +76,7 @@ function RoseCatalogue() {
         <div className="rose-art">
           <p className="eyebrow">FLOR DE LIS · CATÁLOGO DE ROSAS</p>
           <h3 className="mt-4 text-4xl italic">O carinho ganha forma</h3>
-          <img src={roseModels[quantity - 1]} alt={`Modelo de arranjo com ${quantity} ${quantity === 1 ? "rosa" : "rosas"} fornecido pela Flor de Lis`} loading="lazy" width="212" height="320" className="mx-auto mt-7 h-80 w-auto rounded-t-full object-cover" />
+          <div className="rose-photo-stage mt-6"><img src={roseModels[quantity - 1]} alt={`Modelo de arranjo com ${quantity} ${quantity === 1 ? "rosa" : "rosas"} fornecido pela Flor de Lis`} loading="lazy" width="640" height="800" className="rose-model-photo" /></div>
           <div className="mt-7 grid grid-cols-3 gap-3 border-t border-primary/20 pt-5">
             {roseModels.map((_, i) => <div key={i} className="text-sm"><span>{i + 1} {i === 0 ? "rosa" : "rosas"}</span><strong className="mt-1 block text-primary">R$ {(i + 1) * 22},00</strong></div>)}
           </div>
@@ -229,7 +229,7 @@ function Index() {
                 className={`group block ${i === 1 ? "lg:mt-16" : ""}`}
               >
                 <div className="overflow-hidden rounded-sm">
-                  <img src={b.img} alt={b.name} loading="lazy" className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
+                  <img src={b.img} alt={b.name} loading="lazy" width="640" height="800" className="h-full w-full object-contain" />
                 </div>
                 <h3 className="mt-4 text-2xl">{b.name}</h3>
                 <p className="mt-1 text-muted-foreground">{b.note}</p>
